@@ -48,6 +48,7 @@ The current screening prompt is configured to return Chinese explanations.
 The `weekly` step runs `fetch + report + screen-codex + export-ris` in one command.
 When `weekly` runs with Codex screening enabled, it also creates filtered RIS files for `read_now` and `read_later` only.
 Weekly markdown summaries are bilingual by default and use a free translation backend with local cache.
+The default translation path uses `MyMemory`, and automatically falls back to a secondary free endpoint if rate-limited.
 Default window and volume:
 
 - `days = 7`

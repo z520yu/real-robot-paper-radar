@@ -45,7 +45,7 @@ def build_markdown_report(
                 f"- Score: {paper.score:.2f}",
                 f"- Matched terms: {terms}",
                 f"- URL: {paper.url}",
-                f"- Summary (EN): {paper.summary[:500].strip()}",
+                f"- Summary (EN): {paper.summary.strip()}",
                 f"- 摘要 (ZH): {zh_summaries.get(paper.url, '未生成')}",
                 "",
             ]
