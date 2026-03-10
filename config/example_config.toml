@@ -1,0 +1,94 @@
+[database]
+path = "../data/papers.db"
+
+[report]
+dir = "../reports"
+days = 7
+limit = 30
+
+[prompt]
+dir = "../prompts"
+
+[translation]
+enabled = true
+backend = "mymemory"
+source_lang = "en"
+target_lang = "zh-CN"
+timeout_seconds = 20
+cache_path = "../data/translation_cache.json"
+
+[filters]
+min_score = 2.0
+exclude_terms = [
+  "embodied carbon",
+  "embodied cognition",
+  "virtual agent",
+  "education",
+  "healthcare",
+  "layout generation",
+  "scene generation",
+  "indoor layout",
+  "3d scene generation",
+]
+
+[filters.term_weights]
+"real robot" = 3.0
+"real-world robot" = 3.0
+"robot manipulation" = 2.8
+"robotic manipulation" = 2.8
+"manipulation" = 2.3
+"mobile manipulation" = 2.4
+"dexterous manipulation" = 2.8
+"bimanual manipulation" = 2.8
+"grasping" = 2.2
+"grasp" = 1.8
+"contact-rich" = 2.4
+"teleoperation" = 2.0
+"robot arm" = 1.8
+"manipulator" = 1.8
+"robot learning" = 2.2
+"reinforcement learning" = 2.4
+"policy optimization" = 1.8
+"policy learning" = 1.8
+"imitation learning" = 2.0
+"diffusion policy" = 2.2
+"diffusion policies" = 2.2
+"world model" = 1.8
+"world models" = 1.8
+"vision-language-action" = 2.8
+"vision language action" = 2.8
+"vla" = 2.5
+"vlm" = 1.2
+"vision-language model" = 1.4
+"foundation model for robotics" = 2.0
+"robot foundation model" = 2.0
+"humanoid" = 1.4
+"humanoid robot" = 1.8
+"whole-body control" = 1.6
+"tactile" = 1.6
+"proprioception" = 1.3
+"sim2real" = 1.8
+"sim-to-real" = 1.8
+"embodied ai" = 0.8
+"embodied" = 0.4
+"robotics" = 0.8
+
+[[feeds]]
+name = "arXiv cs.RO"
+url = "https://rss.arxiv.org/rss/cs.RO"
+weight = 1.6
+
+[[feeds]]
+name = "arXiv cs.AI"
+url = "https://rss.arxiv.org/rss/cs.AI"
+weight = 1.0
+
+[[feeds]]
+name = "arXiv cs.CV"
+url = "https://rss.arxiv.org/rss/cs.CV"
+weight = 0.6
+
+[[feeds]]
+name = "arXiv cs.LG"
+url = "https://rss.arxiv.org/rss/cs.LG"
+weight = 0.9
